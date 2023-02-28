@@ -61,7 +61,7 @@ const postUser = async (req, res) => {
         } else {
             res.status(400).json({
                 msg: 'error en el registro del usuario',
-                validationError
+                validationError,
             })
         }
     } catch (error) {
