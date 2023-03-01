@@ -10,7 +10,7 @@ const getProducts = async (req, res) => {
     });
 };
 
-//Obtener un usuario x ID
+//Obtener un Producto x ID
 const getProductById = async (req, res) => {
     const product = await Product.findById(req.params.id)
     if (product !== undefined && product !== null) {
@@ -46,7 +46,7 @@ const getProductByName = async (req, res) => {
             })
     }
 };
-//crear un usuario nuevo(CREATE)
+//crear un Producto nuevo(CREATE)
 const postProduct = async (req, res) => {
     try {
         const validationError = validationResult(req);
@@ -86,7 +86,7 @@ const updateProduct = async (req, res) => {
     }
 }
 
-//Eliminar usuario (DELETE)
+//Eliminar Producto (DELETE)
 const deleteProduct = async (req, res) => {
     try {
         await Product.findByIdAndDelete(req.params.id);
